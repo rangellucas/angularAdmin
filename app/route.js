@@ -8,6 +8,7 @@ mainApp.config(function($stateProvider,$urlRouterProvider) {
       templateUrl: "app/index.html",
       resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
         loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+          
           // you can lazy load files for an existing module
           return $ocLazyLoad.load([
             'app/shared/sidebar/controller.js',
@@ -66,7 +67,6 @@ mainApp.run(['$rootScope', '$timeout', 'SrvLoad', 'SrvAlert', function($rootScop
   
   $rootScope.$on('$locationChangeStart', function(event, url, oldUrl, state, oldState) {
     /* Notify page is loading */
-    SrvAlert.close($rootScope);
     SrvLoad.loading();
   });
 
@@ -74,8 +74,7 @@ mainApp.run(['$rootScope', '$timeout', 'SrvLoad', 'SrvAlert', function($rootScop
     
     /* Notify page is loaded */
     $timeout(function() {
-      SrvLoad.loaded();
-      SrvAlert.alert('success','Page loaded','fa fa-check',2000);
+      SrvLoad.loaded();      
     }, 2000);
   });
 
