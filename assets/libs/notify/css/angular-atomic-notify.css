@@ -1,0 +1,79 @@
+ng-atomic-notify, ng-atomic-notify-garcom {
+    position: fixed;
+    right: 0;
+    z-index: 100000;
+}
+
+.atomic-notify {
+    z-index: 100000;
+    right: 0;
+    float: left;
+    width: 350px;
+}
+
+.atomic-notify .atomic-notify-item {
+    display: table;
+    position: relative;
+    margin: 10px auto 0;
+    width: 350px;
+    background-color: #0074D9;
+    color: #fff;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    padding: 0px;
+}
+
+.atomic-notify .atomic-notify-item .icon {
+    display: table-cell;
+    vertical-align: middle;
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.atomic-notify .atomic-notify-item .icon > i {
+    width: 20px;
+    font-size: 20px;
+}
+
+.atomic-notify .atomic-notify-warning {
+    background-color: #f0ad4e;
+}
+
+.atomic-notify .atomic-notify-error {
+  background-color: #d9534f;
+}
+
+.atomic-notify .atomic-notify-success {
+  background-color: #5cb85c;
+}
+
+.atomic-notify .atomic-notify-item .body {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 50px 10px 10px;
+}
+
+.atomic-notify .atomic-notify-item .body > p {
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.atomic-notify .close {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    padding: 1px 8px 3px 7px;
+}
+
+.atomic-notify .close:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}

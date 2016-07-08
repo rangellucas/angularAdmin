@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Admin Theme.</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Load CSS files -->
+		<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css"> 
+		<link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/index.css" type="text/css">
+		<link rel="stylesheet" href="assets/libs/notify/css/angular-atomic-notify.css">
+		<link rel="stylesheet" href="assets/libs/animate-css/animate.css">
+		
+		<!-- Load Javascript files -->
+		<script src="assets/libs/jQuery/jquery.js"></script>
+		<script src="assets/libs/angularJS/angular-1.5.3.min.js"></script>
+		<script src="assets/libs/angularJS/angular-ui-router.min.js"></script>
+		<script src="assets/libs/tether/tether.js"></script>
+		<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/libs/ocLazyLoad/ocLazyLoad.min.js"></script>
+		<script src="assets/libs/ocLazyLoad/ocLazyLoad.min.js"></script>
+		<script src="assets/libs/notify/js/angular-atomic-notify.js"></script>
+
+		<!-- Load App files -->
+		<script src="app/app.js"></script>
+		<script src="app/route.js"></script>
+		<script src="app/shared/loadpage/directive.js"></script>
+        <script src="app/shared/loadpage/service.js"></script>
+        <script src="app/shared/alert/directive.js"></script>
+        <script src="app/shared/alert/service.js"></script>		
+	</head>
+
+	<!-- Main app -->
+	<body ng-app="mainApp">
+		<!-- Main view -->
+		<ui-view></ui-view>
+	</body>
+</html>

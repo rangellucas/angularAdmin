@@ -1,0 +1,22 @@
+<menu-left ng-controller="CtrlSidebarLeft">
+	<div class="navbar-collapse navbar-toggleable-sm navbar-ex1-collapse">
+	    <ul class="nav navbar-nav side-nav list-group">
+	    	<li class="list-group-item" ng-repeat="menu in menus">
+	            <a ng-if="menu.link" ui-sref="{{menu.link}}">
+	            	<i class="fa fa-fw {{menu.icone}}"></i> {{menu.nome}}
+	            </a>
+	            <a ng-if="!menu.link" data-toggle="collapse" onclick="javascript:return false;" href="#{{menu.id}}" aria-expanded="false" aria-controls="collapseExample">
+	            	<i class="fa fa-fw {{menu.icone}}"></i> {{menu.nome}}
+	            </a>
+	            <ul id="{{menu.id}}" ng-if="menu.submenu != ''" class="list-group collapse" aria-expanded="true">
+	                <li class="list-group-item" ng-repeat="submenu in menu.submenu">
+	                    <a ui-sref="{{submenu.link}}">
+	                    	<i class="fa fa-fw {{submenu.icone}}"></i> {{submenu.nome}}
+	                    </a>
+	                </li>
+	            </ul> 
+	        </li>
+	                               
+	    </ul>
+	</div>
+</menu-left>

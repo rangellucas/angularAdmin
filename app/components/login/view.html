@@ -1,0 +1,24 @@
+<div class="container">
+
+	<form class="form-signin" ng-submit="login()">
+		
+		<img class="img-fluid" src="assets/img/logo.png" />
+		<br />
+		
+		<label for="inputEmail" class="sr-only">Login</label>
+		<input type="text" ng-model="formDataLogin.login" class="form-control" placeholder="Login" required="true" autofocus="">
+		
+		<label for="inputPassword" class="sr-only">Senha</label>
+		<input type="password" ng-model="formDataLogin.senha" class="form-control" placeholder="Senha" required="true">
+		<msg-alert></msg-alert>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" ng-model="formDataLogin.manterConectado" value="remember-me"> Manter conectado
+			</label>
+		</div>
+
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+
+	</form>
+
+</div>

@@ -1,0 +1,31 @@
+<!-- Main page for loged users -->
+<div>
+	<!-- Notify directive -->
+	<ng-atomic-notify></ng-atomic-notify>
+
+	<div id="wrapper" ng-class="menu.toggled">
+		<div id="sidebar-wrapper">
+		<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+			<!-- Directive tp load top navigation menu -->
+			<sidebar-top></sidebar-top>
+			<!-- Directive tp load left navigation menu -->
+			<sidebar-left></sidebar-left>
+		</nav>
+		</div>
+		<arcticle>
+			<!-- Directive loading animation -->
+			<loadpage></loadpage>
+			<!-- Content view -->
+			<div id="page-content-wrapper">
+				<div class="container-fluid">
+					<!-- Load views -->
+					<ui-view>
+						<center>
+							<img src="assets/img/logo.png">
+						</center>
+					</ui-view>	
+				</div>
+			</div>
+		</arcticle>
+	</div>	
+</div>

@@ -1,0 +1,18 @@
+<menu-top ng-controller="CtrlSidebarTop">
+    <div class="navbar-header">
+        <a class="navbar-brand pull-left" ui-sref="index">
+           <img src="assets/img/logo-small.png" height="30">
+        </a>
+        <button id="btn-toggle-menu" class="navbar-toggler pull-left" type="button" ng-click="menuToggle()">
+            <i class="fa fa-reorder"></i>
+        </button>
+    </div>
+    <ul class="nav navbar-nav top-nav navbar-right pull-xs-right">
+        <li class="nav-item">
+            <a class="nav-link">{{perfil.nome}}</a>                
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link" ui-sref="login"><i class="fa fa-power-off"></i></a>                
+        </li>            
+    </ul>
+</menu-top>
