@@ -46,6 +46,20 @@ mainApp.config(function($stateProvider,$urlRouterProvider) {
         }]
        }     
     })
+    .state('index.tables', {
+      url: "index/tables",
+      controller: "CtrlTables",
+      templateUrl: "app/components/tables/view.html",
+      resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+        loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+          // you can lazy load files for an existing module
+          return $ocLazyLoad.load([
+            'app/components/tables/controller.js',
+            'app/components/tables/service.js'                       
+          ]);
+        }]
+       }     
+    })
     .state('login', {
       url: "/login",
       controller: "Login",      

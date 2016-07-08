@@ -2,8 +2,8 @@ var indexApp = angular.module("mainApp");
 indexApp.controller('CtrlSidebarLeft',['$scope', function($scope) {
  	
  	$scope.menus = [{
-		nome:'Index',
-		icone:'fa-home',
+		nome:'Graphs',
+		icone:'fa-area-chart',
 		id:'index',
 		link:'index',
 		submenu:false
@@ -21,6 +21,10 @@ indexApp.controller('CtrlSidebarLeft',['$scope', function($scope) {
 			nome:'Forms',
 			link:'index.forms',
 			icone:'fa fa-list-alt',
+		},{
+			nome:'Tables',
+			link:'index.tables',
+			icone:'fa fa-table',
 		}]
 	}];
  	
