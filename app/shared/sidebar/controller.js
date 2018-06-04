@@ -1,6 +1,6 @@
 var indexApp = angular.module("mainApp");
 indexApp.controller('CtrlSidebarLeft',['$scope', function($scope) {
- 	
+
  	$scope.menus = [{
 		nome:'Graphs',
 		icone:'fa-area-chart',
@@ -27,12 +27,12 @@ indexApp.controller('CtrlSidebarLeft',['$scope', function($scope) {
 			icone:'fa fa-table',
 		}]
 	}];
- 	
+
 }]);
 
 indexApp.controller('CtrlSidebarTop',['$scope', function($scope) {
- 	
- 	$scope.perfil = {nome:"User"};
+
+ 	$scope.perfil = {nome:"Usuário"};
 
  	$scope.menu={toggled:""};
 
@@ -47,6 +47,6 @@ indexApp.controller('CtrlSidebarTop',['$scope', function($scope) {
 	   if(value<=768){
 	   	$scope.menu.toggled = "toggled";
 	   }
-	}); 
+	});
 
 }]);

@@ -8,15 +8,15 @@ mainApp.config(function($stateProvider,$urlRouterProvider) {
       templateUrl: "app/index.html",
       resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
         loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
-          
+
           // you can lazy load files for an existing module
           return $ocLazyLoad.load([
             'app/shared/sidebar/controller.js',
             'app/shared/sidebar/directive.js',
-            'app/shared/sidebar/service.js',            
+            'app/shared/sidebar/service.js',
           ]);
         }]
-       }     
+       }
     })
     .state('index.elements', {
       url: "index/elements",
@@ -27,10 +27,10 @@ mainApp.config(function($stateProvider,$urlRouterProvider) {
           // you can lazy load files for an existing module
           return $ocLazyLoad.load([
             'app/components/elements/controller.js',
-            'app/components/elements/service.js'                       
+            'app/components/elements/service.js'
           ]);
         }]
-       }     
+       }
     })
     .state('index.forms', {
       url: "index/forms",
@@ -41,10 +41,10 @@ mainApp.config(function($stateProvider,$urlRouterProvider) {
           // you can lazy load files for an existing module
           return $ocLazyLoad.load([
             'app/components/forms/controller.js',
-            'app/components/forms/service.js'                       
+            'app/components/forms/service.js'
           ]);
         }]
-       }     
+       }
     })
     .state('index.tables', {
       url: "index/tables",
@@ -55,14 +55,14 @@ mainApp.config(function($stateProvider,$urlRouterProvider) {
           // you can lazy load files for an existing module
           return $ocLazyLoad.load([
             'app/components/tables/controller.js',
-            'app/components/tables/service.js'                       
+            'app/components/tables/service.js'
           ]);
         }]
-       }     
+       }
     })
     .state('login', {
       url: "/login",
-      controller: "Login",      
+      controller: "Login",
       templateUrl: "app/components/login/view.html",
       resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
         loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
@@ -74,21 +74,21 @@ mainApp.config(function($stateProvider,$urlRouterProvider) {
           ]);
         }]
        }
-    })    
+    })
 });
 
 mainApp.run(['$rootScope', '$timeout', 'SrvLoad', 'SrvAlert', function($rootScope, $timeout, SrvLoad, SrvAlert) {
-  
+
   $rootScope.$on('$locationChangeStart', function(event, url, oldUrl, state, oldState) {
     /* Notify page is loading */
     SrvLoad.loading();
   });
 
   $rootScope.$on('$locationChangeSuccess', function(event, url, oldUrl, state, oldState) {
-    
+
     /* Notify page is loaded */
     $timeout(function() {
-      SrvLoad.loaded();      
+      SrvLoad.loaded();
     }, 2000);
   });
 
